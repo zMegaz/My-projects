@@ -1,0 +1,31 @@
+from tkinter import *
+
+root = Tk()
+root.geometry('300x300')
+root.title('mad_lib_project')
+Label(root, text='mad libs generator project').pack()
+Label(root, text='Choose a story :', font='arial 20 bold').place(x=40, y=80)
+
+#stories
+def madlib1():
+    name = input('enter a name: ')
+    vehicle = input('enter a vehicle: ')
+    destination = input('enter a destination: ')
+
+    print(' so '+ name + ' went to their ' + vehicle + ' and drove to ' + destination + '.')
+
+def madlib2():
+    name = input('enter a name: ')
+    game = input('enter a game name: ')
+    hours = str(input('enter number of hours: '))
+
+    print(' so ' + name + ' played ' + game + ' for about ' + hours + ' hours a day.')
+
+#buttons
+Button(root, text= 'The driver', font ='arial 15', command= madlib1, bg = 'ghost white').place(x=60, y=120)
+Button(root, text= 'The gamer', font ='arial 15', command = madlib2 , bg = 'ghost white').place(x=70, y=180)
+
+
+root.mainloop()
+
+
